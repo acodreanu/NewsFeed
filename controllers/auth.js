@@ -81,11 +81,6 @@ exports.getStatus = (req, res, next) => {
         error.statusCode = 404;
         throw error;
       }
-      // if (user._id !== req.userId) {
-      //   const error = new Error('Not authorized.');
-      //   error.statusCode = 403;
-      //   throw error;
-      // }
 
       res.status(200).json({ status: user.status });
     })
